@@ -35,7 +35,7 @@ class Details_Activity : ComponentActivity() {
     }
 
     fun convertTime(Unix:Long): String {
-        val time = java.text.SimpleDateFormat(applicationContext.getString(R.string.format)).format(java.util.Date((Unix+10800) * 1000))
+        val time = java.text.SimpleDateFormat(applicationContext.getString(R.string.format)).format(java.util.Date((Unix) * 1000))
         return time
     }
 

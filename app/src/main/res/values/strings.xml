@@ -10,7 +10,7 @@
     <string name="wind.speed">Скорость ветра</string>
     <string name="pressure">Давление</string>
     <string name="feelsLike">Ощущается как</string>
-    <string name="SPB">Санкт-Петербург</string>
+    <string name="SPB">г.Санкт-Петербург</string>
     <string name="title_activity_details">Details_Activity</string>
     <string name="title_activity_forecast">Forecast_Activity</string>
     <string name="visibility">Видимость</string>
@@ -18,7 +18,10 @@
     <string name="clouds">Облачность</string>
     <string name="temp_max">Максимальная температура </string>
     <string name="temp_min">Минимальная температура </string>
-    <string name="format">HH:mm:ss</string>
+    <string name="format">HH:mm</string>
     <string name="sunset">Закат</string>
     <string name="sunrise">Восход</string>
+    <string name="Error">Ошибка! Проверьте подключение к интернету или перезагрузите приложение</string>
+    <string name="Forecast_ru">Прогноз погоды</string>
+    <string name="Details_ru">Детальная информация</string>
 </resources>

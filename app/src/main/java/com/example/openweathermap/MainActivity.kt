@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val tempTextView: TextView = findViewById(R.id.temp_view)
         val description: TextView = findViewById(R.id.textView_desc)
         val picture: WebView = findViewById(R.id.icon)
@@ -35,8 +36,9 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Weather_Now>, t: Throwable) {
-                Toast.makeText(applicationContext, t.toString(), Toast.LENGTH_SHORT).show()
-                ///!!!!!!
+                Toast.makeText(applicationContext, applicationContext.getString(R.string.Error), Toast.LENGTH_LONG).show()
+                details.isEnabled = false;
+                forecast.isEnabled = false;
             }
         })
         details.setOnClickListener {
@@ -66,14 +68,11 @@ class MainActivity : AppCompatActivity() {
         description.text = weather.weather[0].description
         mainTextView.text = builder
             .append("\n" + applicationContext.getString(R.string.feelsLike) + ": ")
-            .append(weather.main.feels_like.roundToInt().toString())
-            .append((applicationContext.getString(R.string.celsius) + "\n"))
+            .append(weather.main.feels_like.roundToInt().toString()).append((applicationContext.getString(R.string.celsius) + "\n"))
             .append("\n" + applicationContext.getString(R.string.humidity)+ ": ")
-            .append(weather.main.humidity.roundToInt().toString())
-            .append(" " + applicationContext.getString(R.string.procent) + "\n" + "\n")
+            .append(weather.main.humidity.roundToInt().toString()).append(" " + applicationContext.getString(R.string.procent) + "\n" + "\n")
             .append(applicationContext.getString(R.string.pressure) + ": ")
-            .append((weather.main.pressure/1.333).roundToInt().toString() + " мм рт.ст. \n")
-            .append("\n" + applicationContext.getString(R.string.wind_speed)+ ": ")
+            .append((weather.main.pressure/1.333).roundToInt().toString() + " мм рт.ст. \n").append("\n" + applicationContext.getString(R.string.wind_speed)+ ": ")
             .append(weather.wind.speed + " м/с \n")
         picture.loadUrl("https://openweathermap.org/img/wn/" + weather.weather[0].icon + "@2x.png")
     }
