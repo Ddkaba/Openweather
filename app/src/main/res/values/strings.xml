@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Openweather</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="Details">Details</string>
+    <string name="Forecast">Forecast</string>
+    <string name="celsius">°</string>
+    <string name="plus">+</string>
+    <string name="procent">%</string>
+    <string name="humidity">Влажность</string>
+    <string name="wind.speed">Скорость ветра</string>
+    <string name="pressure">Давление</string>
+    <string name="feelsLike">Ощущается как</string>
+    <string name="SPB">Санкт-Петербург</string>
+    <string name="title_activity_details">Details_Activity</string>
+    <string name="title_activity_forecast">Forecast_Activity</string>
+    <string name="visibility">Видимость</string>
+    <string name="windDegree">Угол ветра</string>
+    <string name="clouds">Облачность</string>
+    <string name="temp_max">Максимальная температура </string>
+    <string name="temp_min">Минимальная температура </string>
+    <string name="format">HH:mm:ss</string>
+    <string name="sunset">Закат</string>
+    <string name="sunrise">Восход</string>
+</resources>
